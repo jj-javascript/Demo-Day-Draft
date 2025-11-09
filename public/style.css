@@ -1,0 +1,196 @@
+.jumbotron{
+    background-color: rgb(130, 173, 209);
+}
+
+/* Below is mostly placeholder CSS from Claude that will be replaced later */
+
+.quotes{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #908c94 100%);
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form Styling */
+  form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form input[type="url"],
+  form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  form input[type="url"]:focus,
+  form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  }
+  
+  form button[type="submit"] {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #7e8397 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  }
+  
+  /* Articles Section */
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin: 40px 0 20px;
+  }
+  
+  /* Article Cards */
+  ul.quotes {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  li.quote {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  li.quote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Article Title Link */
+  li.quote span:first-child {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  li.quote a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  li.quote a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+  }
+  
+  /* Article Description */
+  li.quote span:nth-child(2) {
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  /* Button Container */
+  li.quote button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  #update-button {
+    background: #3498db;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  #update-button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  #delete-button {
+    background: #e74c3c;
+    color: white;
+  }
+  
+  #delete-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+  }
+  
+  /* Message Styling */
+  #message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    ul.quotes {
+      grid-template-columns: 1fr;
+    }
+    
+    h1 {
+      font-size: 2em;
+    }
+    
+    form {
+      padding: 20px;
+    }
+  }
