@@ -32,7 +32,7 @@ Compiler is a full-stack web application where users can send content from their
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Demo-Day-Draft.git
+git clone https://github.com/yourusername/Compilr-Draft.git
 ````
 
 2. Navigate to the project directory:
