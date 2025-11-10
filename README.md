@@ -2,7 +2,7 @@
 
 A full-stack Node.js and Express web application that allows users to compile their content they would like to see later into one sleek social feed.
 
-## [Live Demo](https://bird-journal-d3oz.onrender.com)
+## [Live Demo](https://compilr-draft.onrender.com)
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
