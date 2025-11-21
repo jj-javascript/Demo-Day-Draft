@@ -103,7 +103,8 @@ module.exports = function(app, passport, db) {
                         quotesCollection.save({
                             'url': req.body.name,
                             'title': title.text(),
-                            'description': meta.attr('content')
+                            'description': meta.attr('content'),
+                            'id': req.body._id
                         })
                         res.redirect('/index')
                     }).catch(function (err) {
@@ -111,7 +112,7 @@ module.exports = function(app, passport, db) {
                     });
                     
                         
-                            // console.log(result)
+                            console.log(result)
                             // fetch(req.body.name)
                             // .then((response) => response.text())
                             // .then ((result) => {
@@ -143,14 +144,17 @@ module.exports = function(app, passport, db) {
                 })
                 app.delete('/quotes', (req, res) => {
                     quotesCollection
-                    .deleteOne({ name: req.body.name })
-                    .then(result => {
-                        if (result.deletedCount === 0) {
-                            return res.json('No quote to delete')
-                          }
-                      res.json(`Deleted Darth Vader's quote`)
+                    db.collection('quotes').delete({_id: ObjectId(req.body.id), title: req.body.title, description: req.body.description}, (err, result) => {
+                        if (err) return res.send(500, err)
+                        res.send('Entry Deleted!')
                     })
-                    .catch(error => console.error(error))
+                    // .then(result => {
+                    //     if (result.deletedCount === 0) {
+                    //         return res.json('No quote to delete')
+                    //       }
+                    //   res.json(`Deleted Darth Vader's quote`)
+                    // })
+                    // .catch(error => console.error(error))
                 })
                 app.listen(6001, function () {
                     console.log('listening on 6001')

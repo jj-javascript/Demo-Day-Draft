@@ -22,11 +22,11 @@ update.addEventListener('click', _ => {
 })
 
 deleteButton.addEventListener('click', _ => {
+    console.log('bananas')
     fetch('/quotes', {
         method: 'delete',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            name: 'Darth Vader'
         })
     })
         .then(res => {

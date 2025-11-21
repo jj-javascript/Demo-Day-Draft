@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="public/style.css">
+    <!-- <link rel="stylesheet" href="public/style.css"> -->
     <link rel="stylesheet" href="style.css">
         <title>Compilr</title>
   </head>
@@ -31,6 +31,7 @@
           <span><a href="<%= quotes[i].url %>"><%= quotes[i].title %></a></span>:
           <!-- Output quote from the iterated quote object -->
           <span><%= quotes[i].description %></span>
+          <span class="entryID" id="entryID"><%= quotes[i]._id %></span>
           <button id="update-button">Update</button>
           <button id="delete-button">Delete</button>
         </li>
